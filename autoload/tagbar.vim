@@ -1713,7 +1713,7 @@ function! s:PrintKinds(typeinfo, fileinfo) abort
                 let foldmarker = g:tagbar#icon_open
             endif
 
-            let padding = g:tagbar_show_visibility ? ' ' : ''
+            let padding = g:tagbar_show_visibility ? 'x' : ''
             call add(output, foldmarker . padding . kind.long)
 
             let curline                   = len(output) + offset
@@ -1781,6 +1781,7 @@ function! s:PrintTag(tag, depth, output, fileinfo, typeinfo) abort
                 " identifier)
                 if !has_key(a:typeinfo.kind2scope, ckind.short)
                     let indent  = (a:depth + 1) * g:tagbar_indent
+                    let indent += g:tagbar_show_visibility
                     let indent += g:tagbar_show_visibility
                     let indent += 1 " fold symbol
                     call add(a:output, repeat(' ', indent) . '[' . ckind.long . ']')

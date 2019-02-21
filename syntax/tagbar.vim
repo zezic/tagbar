@@ -22,11 +22,11 @@ execute "syntax match TagbarScope '" . s:pattern . "'"
 let s:pattern = '\S\@<![' . s:ics . ']\([-+# ]\?\)\@='
 execute "syntax match TagbarFoldIcon '" . s:pattern . "'"
 
-let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=+\([^-+# ]\)\@='
+let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=• \([^-+# ]\)\@='
 execute "syntax match TagbarVisibilityPublic '" . s:pattern . "'"
-let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=#\([^-+# ]\)\@='
+let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=- \([^-+# ]\)\@='
 execute "syntax match TagbarVisibilityProtected '" . s:pattern . "'"
-let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=-\([^-+# ]\)\@='
+let s:pattern = '\(\S\@<![' . s:ics . ' ]\)\@<=× \([^-+# ]\)\@='
 execute "syntax match TagbarVisibilityPrivate '" . s:pattern . "'"
 
 unlet s:pattern
