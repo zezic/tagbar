@@ -1713,7 +1713,7 @@ function! s:PrintKinds(typeinfo, fileinfo) abort
                 let foldmarker = g:tagbar#icon_open
             endif
 
-            let padding = g:tagbar_show_visibility ? 'x' : ''
+            let padding = g:tagbar_show_visibility ? ' ' : ''
             call add(output, foldmarker . padding . kind.long)
 
             let curline                   = len(output) + offset
