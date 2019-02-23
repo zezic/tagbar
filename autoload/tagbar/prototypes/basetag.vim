@@ -89,7 +89,7 @@ function! s:_getPrefix() abort dict
         elseif has_key(self.fields, 'file')
             let prefix .= s:visibility_symbols.private . ' '
         else
-            let prefix .= ' '
+            let prefix .= '  '
         endif
     endif
 
